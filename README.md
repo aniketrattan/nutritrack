@@ -2,16 +2,17 @@
 
 ## Table of Contents
 
-* [Description](#description)
-* [Features](#features)
-* [Technologies](#technologies)
-* [Environment Variables](#environment-variables)
-* [Database Setup & Initialization](#database-setup--initialization)
-* [Running the Application](#running-the-application)
-* [API Integration & Architecture](#api-integration--architecture)
-* [Extra Features](#extra-features)
-* [Security Considerations](#security-considerations)
-* [Contributions](#contributions)
+- [NutriTrack – Calorie Manager Web Application](#nutritrack--calorie-manager-web-application)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Features](#features)
+  - [Technologies](#technologies)
+  - [Environment Variables](#environment-variables)
+  - [Database Setup \& Initialization](#database-setup--initialization)
+  - [Running the Application](#running-the-application)
+  - [API Integration \& Architecture](#api-integration--architecture)
+  - [Extra Features](#extra-features)
+  - [Security Considerations](#security-considerations)
 
 ## Description
 
@@ -38,7 +39,7 @@ NutriTrack is a full-stack Node.js/Express application for tracking daily nutrit
 
 ## Environment Variables
 
-Configuration is driven by a `.env` file. We have provided the `.env` file which includes the API_KEY and API_SECRET. Please modify the database variables as per your requirement.
+Configuration is driven by a `.env` file. Copy `.env.example` to `.env`, then set your FatSecret and MySQL credentials.
 
 ## Database Setup & Initialization
 
@@ -100,10 +101,3 @@ Middleware patterns:
 * **SQL Safety**: Parameterized queries via `mysql2/promise` to mitigate injection risks.
 * **Session Security**: Secure cookies, `sameSite=Strict`, rolling sessions.
 * **XSS & CSRF**: Content Security Policy headers via Helmet; CSRF tokens for state-changing POST/DELETE requests.
-
-## Contributions
-
-* **Aniket Rattan**: Architected and implemented the MySQL schema and API integration layer. Developed the ingredients search page, meal plan workflows, and "My Favorites" module. Secured key routes using custom Express middleware (`ensureAuth`, `ensureAdmin`).
-* **Hang Yu**: Designed and built the home page UI. Developed the user profile page, the admin interface, and core user management functionality (CRUD operations for user accounts).
-* **Weize Qiu**: Styled and refined the home page aesthetic. Designed and implemented the "About Us" and "Support" pages with responsive UI components, and also community favorite .
-* **Ziming Yu**: Implemented the login and signup page UI and connected authentication flows to the database. Created the profile-login page to capture and persist basic user information.
