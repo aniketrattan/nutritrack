@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NutriTrack – My Favorites</title>
+    <link rel="stylesheet" href="stylesheets/search.css" />
+    <link rel="stylesheet" href="stylesheets/favorites.css" />
+    <link rel="stylesheet" href="stylesheets/home.css" />
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="Search.html" class="logo-link">
+                <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img" />
+            </a>
+            <nav class="nav-links">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="Search.html" class="nav-link">Ingredients</a>
+                <a href="MealPlan.html" class="nav-link">Meal Plan</a>
+                <a href="favorites.html" class="nav-link active">My Favorites</a>
+            </nav>
+            <div id="user-area">
+                <a href="SignUp.html" class="btn btn-signin">Sign In</a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="search-container">
+        <div class="container">
+            <h1>My Favorites</h1>
+            <section id="results" class="results-grid"></section>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascripts/favorites.js"></script>
+    <script src="javascripts/navbar.js"></script>
+    <script src="javascripts/profileDropdown.js"></script>
+
+
+</body>
+
+</html>

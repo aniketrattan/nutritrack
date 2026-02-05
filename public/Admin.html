@@ -1,0 +1,76 @@
+<!--
+Admin User Account:
+Add new users.
+Delete existing users.
+List all registered users.
+Edit specific user details (e.g., update their address or avatar).-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard – NutriTrack</title>
+  <link rel="stylesheet" href="stylesheets/home.css" />
+  <link rel="stylesheet" href="stylesheets/admin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo-link">
+        <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img" />
+      </a>
+      <nav class="nav-links">
+        <a href="admin.html" class="nav-link active">Admin</a>
+      </nav>
+      <button id="logoutBtn" class="btn btn-signin">Log Out</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <h1 style="margin: 2rem 0;">Welcome, Admin</h1>
+
+    <!-- User Form -->
+    <form id="addUserForm" class="user-form">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="age" placeholder="Age" />
+      <select id="sex" required>
+        <option value="" disabled selected hidden>Select Sex</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit" class="btn btn-signin">Add User</button>
+    </form>
+
+    <!-- User Table -->
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Avatar</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Sex</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody">
+        <!-- populated via JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="javascripts/Admin.js"></script>
+  <script src="javascripts/navbar.js"></script>
+</body>
+
+</html>

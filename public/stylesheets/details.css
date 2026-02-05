@@ -1,0 +1,241 @@
+:root {
+  --primary-color: #4caf50;
+  --primary-dark: #388e3c;
+  --secondary-color: #ffffff;
+  --bg-color: #f5f5f5;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --accent-color: #666666;
+  --radius: 8px;
+  --transition: 0.3s;
+
+  /* macro chart colours */
+  --carb-color: #ffb946;
+  --protein-color: #4e89ff;
+  --fat-color: #ff5c5c;
+
+  /* nutrition label borders */
+  --border-light: #e0e0e0;
+  --border-dark: #757575;
+
+  /* nutrition-facts metrics */
+  --nf-title-size: 2rem;
+  --nf-title-weight: 900;
+  --nf-divider-thick: 8px;
+  --nf-row-padding: 0.5rem 0;
+  --nf-indent: 1.5rem;
+}
+/* Back Button */
+.back-btn {
+  margin-right: auto;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.details-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.details-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.details-card h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.food-name {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.serving-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.serving-selector label {
+  font-weight: 500;
+}
+.serving-selector select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.macro-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.macro-chart {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--carb-color)    0% 0%,
+    var(--protein-color) 0% 0%,
+    var(--fat-color)     0% 0%
+  );
+}
+.macro-chart::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+.macro-total {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.macro-values {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.macro-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.macro-label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+.macro-label.macro-carb-label {
+  color: var(--carb-color);
+}
+.macro-label.macro-protein-label {
+  color: var(--protein-color);
+}
+.macro-label.macro-fat-label {
+  color: var(--fat-color);
+}
+.macro-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.macro-percent {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-top: 0.1rem;
+}
+
+.nf-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: var(--nf-divider-thick) solid var(--primary-color);
+  background: var(--secondary-color);
+}
+.nutrition-facts h2 {
+  font-size: var(--nf-title-size);
+  font-weight: var(--nf-title-weight);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--nf-divider-thick) solid var(--border-dark);
+}
+
+.nutrition-table--label {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.nutrition-table--label th,
+.nutrition-table--label td {
+  padding: var(--nf-row-padding);
+  vertical-align: top;
+  text-align: right;
+}
+.nutrition-table--label tr:nth-child(1),
+.nutrition-table--label tr:nth-child(2) {
+  border-bottom: var(--nf-divider-thick) solid var(--border-dark);
+}
+.nutrition-table--label tr:nth-child(1) th,
+.nutrition-table--label tr:nth-child(2) th {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: var(--nf-indent);
+}
+.nutrition-table--label tr:nth-child(1) td,
+.nutrition-table--label tr:nth-child(2) td {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+.nutrition-table--label tr:nth-child(n + 3) {
+  border-bottom: 1px solid var(--border-light);
+}
+.nutrition-table--label tr:nth-child(n + 3) th {
+  text-align: left;
+  padding-left: var(--nf-indent);
+  font-weight: normal;
+}
+.nutrition-table--label tr:nth-child(even) td {
+  background: var(--bg-color);
+}
+.nutrition-table--label tr:last-child {
+  border-bottom: none;
+}
+
+.btn-fav {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto 0;
+  background: var(--primary-dark);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+.btn-fav:hover {
+  transform: translateY(-2px);
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.site-header .logo-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

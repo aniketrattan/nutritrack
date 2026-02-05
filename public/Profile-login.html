@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    html {
+      visibility: hidden;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrack – Profile Setup</title>
+
+  <link rel="stylesheet" href="stylesheets/search.css">
+  <link rel="stylesheet" href="stylesheets/Profile-login.css">
+</head>
+
+<body>
+  <!-- Reuse the same header  -->
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo-link">
+        <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img" />
+      </a>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="Profile-login.html" class="nav-link active">Profile Setup</a>
+      </nav>
+      <button type="button" class="btn btn-signin">Sign In</button>
+    </div>
+  </header>
+
+  <main class="container profile-wizard">
+
+    <div class="progress-bar">
+      <div id="progress" class="progress"></div>
+    </div>
+
+    <div class="step" id="step-1">
+      <h2>Tell Us About You</h2>
+      <div class="avatar-upload">
+        <input type="file" id="avatarInput" accept="image/*" hidden>
+        <label for="avatarInput">
+          <img id="avatarPreview" src="images/default-image.png" alt="Click to upload avatar">
+        </label>
+      </div>
+      <input type="number" id="age" placeholder="Age (years)" required>
+
+      <select id="sex" required>
+        <option value="" disabled selected>Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <input type="number" id="height" placeholder="Height (cm)" required>
+      <input type="number" id="weight" placeholder="Weight (kg)" required>
+      <div class="button-group">
+        <button type="button" id="next-1" disabled>Next →</button>
+      </div>
+    </div>
+
+    <div class="step hidden" id="step-2">
+      <h2>How Active Are You?</h2>
+      <div class="activity-options">
+        <button type="button" class="activity-btn" data-mult="1.2">Sedentary</button>
+        <button type="button" class="activity-btn" data-mult="1.375">Lightly Active</button>
+        <button type="button" class="activity-btn" data-mult="1.55">Active</button>
+        <button type="button" class="activity-btn" data-mult="1.725">Very Active</button>
+        <button type="button" class="activity-btn" activity-btn data-mult="1.9">Extremely Active</button>
+      </div>
+      <div class="button-group">
+        <button type="button" id="prev-2">← Previous</button>
+        <button type="button" id="next-2" disabled>Next →</button>
+      </div>
+    </div>
+
+    <div class="step hidden" id="step-3">
+      <h2>Your Daily Targets</h2>
+      <div class="current-targets">
+        <div>Calories: <span id="targetCalories">—</span> kcal</div>
+        <div>Protein: <span id="targetProtein">—</span> g</div>
+        <div>Fat: <span id="targetFat">—</span> g</div>
+        <div>Carbs: <span id="targetCarbs">—</span> g</div>
+      </div>
+      <button type="button" id="customizeTargets" class="btn">Customize</button>
+
+      <div class="nutrient-inputs hidden">
+        <label>
+          Calories (kcal)
+          <input type="number" id="calories" />
+        </label>
+        <label>
+          Protein (g)
+          <input type="number" id="protein" />
+        </label>
+        <label>
+          Fat (g)
+          <input type="number" id="fat" />
+        </label>
+        <label>
+          Carbs (g)
+          <input type="number" id="carbs" />
+        </label>
+      </div>
+
+      <div class="button-group">
+        <button type="button" id="prev-3">← Previous</button>
+        <button type="button" id="submit-profile" disabled>Submit</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="javascripts/Profile-login.js"></script>
+</body>
+
+</html>

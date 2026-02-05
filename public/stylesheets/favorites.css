@@ -1,0 +1,84 @@
+.results-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+}
+
+.food-card {
+  width: 300px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal select,
+.modal input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 0.25rem;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.modal-actions .btn {
+  margin-left: 0.5rem;
+}
+
+.food-card .add-to-plan-btn {
+  background: var(--primary-color); 
+  color: var(--secondary-color);   
+  border: none;
+  margin-top: 0.5rem;               
+  padding: 0.5rem 1rem;
+  transition: opacity var(--transition);
+}
+.food-card .add-to-plan-btn:hover {
+  opacity: 0.9;
+}
+
+.food-card .unfav-btn {
+  background: #f0c040;   
+  color: #333;           
+  border: none;
+  margin-top: 0.5rem;   
+  padding: 0.5rem 1rem;
+  transition: opacity var(--transition);
+}
+.food-card .unfav-btn:hover {
+  opacity: 0.9;
+}

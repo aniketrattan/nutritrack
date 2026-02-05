@@ -1,0 +1,131 @@
+/* Global reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Layout: flex row with two panels */
+.profile-page .container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 8rem;
+  padding: 5rem;
+
+}
+
+/* Left: profile info box */
+.profile-info {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+}
+
+/* Avatar styling */
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Username */
+.user-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Edit button */
+.btn-edit {
+  background-color: var(--button-bg, #f0f0f0);
+  color: #222;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: var(--button-hover-bg, #e0e0e0);
+}
+
+/* Right: profile content block */
+.profile-content {
+  flex: 1;
+
+}
+
+/* Info table */
+.profile-table {
+  width: 100%;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+}
+
+.profile-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-table td {
+  padding: 2rem 6rem;
+  font-size: 1rem;
+}
+
+.profile-table td:first-child {
+  width: 140px;
+  font-weight: 500;
+  color: #555;
+}
+
+.value-cell {
+  text-align: right;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* Mode toggle styling */
+.view-mode {
+  font-weight: 500;
+}
+
+.edit-mode {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}

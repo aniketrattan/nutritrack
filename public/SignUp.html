@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | NutriTrack</title>
+  <link rel="stylesheet" href="stylesheets/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+        <img src="images/WebLogo.png" alt ="logo is missing">
+    </div>
+    <h1>Track your daily nutrient</h1>
+    <p class="small-text">Already have an account? <a href="Login.html">Log In</a></p>
+
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁</span>
+      </div>
+
+      <div class="password-strength">
+        <p id="strength-text">Password Strength: </p>
+        <meter id="strength-meter" min="0" max="100" value="0"></meter>
+      </div>
+      <p id="password-error-message" class="password-error-message"></p>
+
+      <div class="password-wrapper" style="margin-top: -10px;">
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <span class="toggle-password" onclick="toggleConfirmPassword()">👁</span>
+      </div>
+
+      <button type="submit">Sign Up</button>
+      <p id="error-message" class="error-message"></p>
+    </form>
+
+    <div class="footer">
+      By continuing, you agree to our <a href="#">Privacy Policy</a> and our <a href="#">Terms of Service</a>.
+    </div>
+  </div>
+  <script src="javascripts/ConfirmPassword.js"></script>
+  <script src="javascripts/SignUp.js"></script>
+
+</body>
+</html>

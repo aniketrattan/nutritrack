@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Support NutriTrack</title>
+  <link rel="stylesheet" href="stylesheets/support.css">
+  <script src="javascripts/support.js" defer></script>
+  <link rel="stylesheet" href="stylesheets/home.css" />
+
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo-link">
+        <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="support.html" class="nav-link active">support</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="Search.html" class="nav-link">Ingredients</a>
+        <a href="MealPlan.html" class="nav-link">Meal Plan</a>
+        <a href="favorites.html" class="nav-link">My Favorites</a>
+
+      </nav>
+      <div id="user-area">
+        <a href="SignUp.html" class="btn btn-signin">Sign In</a>
+      </div>
+
+    </div>
+  </header>
+  <div class="faq-container">
+    <h1>FAQs</h1>
+    <div class="tabs">
+      <button type="button" class="tab active" data-tab="app">App Usage</button>
+      <button type="button" class="tab" data-tab="account">Account and Billing</button>
+      <button type="button" class="tab" data-tab="nutrition">Nutrition</button>
+    </div>
+    <div class="faq-content" id="app">
+      <div class="accordion-item">
+        <button type="button" class="accordion">How do I know what kind of foods are good to my health?</button>
+        <div class="panel">
+          <p>being a part of our NutriTrack will regularly receive our nutrition related article and recipe.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button type="button" class="accordion">how much protein do i need to intake everyday</button>
+        <div class="panel">
+          <p>NutriTrack will tell you how much you need to take depend on your purpose of diet management</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button type="button" class="accordion">How do I know how much calories on my daily meal?</button>
+        <div class="panel">
+          <p>Our product will estimate relatively close nutritional information based on each ingredient and seasoning
+            information.</p>
+        </div>
+      </div>
+    </div>
+    <div class="faq-content hidden" id="account">
+      <p>Account and Billing.</p>
+    </div>
+    <div class="faq-content hidden" id="nutrition">
+      <h2>How We Calculate Your Daily Needs</h2>
+
+      <p>We use the <strong>Mifflin–St Jeor equation</strong> to estimate your Basal Metabolic Rate (BMR):</p>
+      <pre>BMR = 10 × weight (kg) + 6.25 × height (cm) − 5 × age (years) + 5</pre>
+
+      <p>Your total daily calories are then calculated by applying your activity level:</p>
+      <pre>Calories = BMR × Activity Factor</pre>
+
+      <p>We make a small adjustment based on your Body Mass Index (BMI = weight / (height/100)²):</p>
+      <ul>
+        <li>If BMI ≥ 25 (overweight), we subtract 500 kcal to promote a gradual loss</li>
+        <li>If BMI &lt; 18.5 (underweight), we add 500 kcal to support healthy gain</li>
+      </ul>
+
+      <p>Finally, your macronutrient targets are set as a percentage of total calories:</p>
+      <ul>
+        <li><strong>Protein:</strong> 25% → grams = (0.25 × Calories) / 4</li>
+        <li><strong>Fat:</strong> 25% → grams = (0.25 × Calories) / 9</li>
+        <li><strong>Carbs:</strong> 50% → grams = (0.50 × Calories) / 4</li>
+      </ul>
+    </div>
+  </div>
+  <script src="javascripts/navbar.js"></script>
+  <script src="javascripts/profileDropdown.js"></script>
+
+
+
+</body>
+
+</html>

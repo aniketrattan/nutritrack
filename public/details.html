@@ -1,0 +1,87 @@
+<!-- details.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="stylesheets/search.css" />
+  <link rel="stylesheet" href="stylesheets/details.css" />
+
+  <title>NutriTrack – Nutrition Details</title>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <!-- back button -->
+      <button type="button" class="btn back-btn" onclick="window.history.back()" aria-label="Go back">
+        ← Back
+      </button>
+
+      <!-- logo -->
+      <a href="Search.html" class="logo-link">
+        <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img" />
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container details-container">
+      <div class="details-card">
+        <h1>Nutrition Details</h1>
+        <h2 id="food-name" class="food-name">Loading…</h2>
+
+        <div class="serving-selector">
+          <label for="servingSelect">Choose a serving:</label>
+          <select id="servingSelect"></select>
+        </div>
+
+        <section class="macro-summary">
+          <div class="macro-chart" id="macro-chart">
+            <span class="macro-total" id="macro-total">0 kcal</span>
+          </div>
+          <div class="macro-values">
+            <div class="macro-item">
+              <span class="macro-label macro-carb-label">Carbohydrates</span>
+              <span class="macro-value" id="macro-carbs">0 g</span>
+            </div>
+            <div class="macro-item">
+              <span class="macro-label macro-protein-label">Proteins</span>
+              <span class="macro-value" id="macro-protein">0 g</span>
+            </div>
+            <div class="macro-item">
+              <span class="macro-label macro-fat-label">Fats</span>
+              <span class="macro-value" id="macro-fat">0 g</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="nutritionFacts" class="nutrition-facts">
+          <div class="nf-wrapper">
+            <h2>Nutrition Facts</h2>
+            <table class="nutrition-table nutrition-table--label">
+              <tbody id="nutrition-body">
+                <tr>
+                  <td colspan="2">Loading nutrition data…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <button type="submit" id="fav-btn" class="btn btn-fav">
+          ♥ Add to Favorites
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="javascripts/details.js"></script>
+  <script src="javascripts/profileDropdown.js"></script>
+
+</body>
+
+</html>

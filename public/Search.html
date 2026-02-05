@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrack – Search Ingredients</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="stylesheets/search.css" />
+  <link rel="stylesheet" href="stylesheets/favorites.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="stylesheets/home.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="Search.html" class="logo-link">
+        <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img" />
+      </a>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="Search.html" class="nav-link active">Ingredients</a>
+        <a href="MealPlan.html" class="nav-link">Meal Plan</a>
+        <a href="favorites.html" class="nav-link">My Favorites</a>
+      </nav>
+      <div id="user-area">
+      </div>
+    </div>
+  </header>
+
+  <main class="search-container">
+    <div class="container">
+      <div class="search-bar">
+        <input id="foodQuery" type="text" placeholder="Search for food…" />
+        <button type="button" id="searchBtn" class="btn btn-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <section id="results" class="results-grid">
+      </section>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="javascripts/search.js"></script>
+  <script src="javascripts/navbar.js"></script>
+  <script src="javascripts/profileDropdown.js"></script>
+
+
+</body>
+
+</html>

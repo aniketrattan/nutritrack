@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrack Profile</title>
+
+  <link rel="stylesheet" href="stylesheets/home.css" />
+  <link rel="stylesheet" href="stylesheets/profile.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Raleway&family=Roboto&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo-link">
+        <img src="images/WebLogo.png" alt="NutriTrack Logo" class="logo-img" />
+      </a>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="Search.html" class="nav-link">Ingredients</a>
+        <a href="MealPlan.html" class="nav-link">Meal Plan</a>
+        <a href="favorites.html" class="nav-link">My Favorites</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="profile-page">
+    <div class="container">
+      <section class="profile-info">
+        <img id="avatar" class="user-avatar" src="" alt="User Avatar" />
+         <input type="file" id="avatar-input" accept="image/*" style="display:none;" />
+        <h2 class="user-name" id="username-view-title">Username</h2>
+        <button id="edit-btn" class="btn btn-edit">✏️ Edit</button>
+      </section>
+      <div class="profile-content">
+        <table class="profile-table">
+          <tr>
+            <td>Email</td>
+            <td>
+              <span id="email-view" class="view-mode"></span>
+              <input type="email" id="email-input" class="edit-mode" readonly style="display: none;" />
+            </td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>
+              <span id="age-view" class="view-mode"></span>
+              <input type="number" id="age-input" class="edit-mode" min="0" style="display: none;" />
+            </td>
+          </tr>
+          <tr>
+            <td>Sex</td>
+            <td>
+              <span id="sex-view" class="view-mode"></span>
+              <select id="sex-input" class="edit-mode" style="display: none;">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>
+              <span id="height-view" class="view-mode"></span>
+              <input type="number" id="height-input" class="edit-mode" min="0" step="0.01" style="display: none;" />
+            </td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td>
+              <span id="weight-view" class="view-mode"></span>
+              <input type="number" id="weight-input" class="edit-mode" min="0" step="0.01" style="display: none;" />
+            </td>
+          </tr>
+          <tr>
+            <td>Username</td>
+            <td>
+              <span id="username-view" class="view-mode"></span>
+              <input type="text" id="username-input" class="edit-mode" style="display: none;" />
+            </td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>
+              <span id="address-view" class="view-mode"></span>
+              <input type="text" id="address-input" class="edit-mode" style="display: none;" />
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+    <script src="javascripts/profile.js"></script>
+  </main>
+
+</body>
+
+</html>

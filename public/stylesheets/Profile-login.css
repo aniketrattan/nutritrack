@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffffff;
+  --bg-color: #f5f5f5;
+  --text-color: #333333;
+  --radius: 8px;
+  --transition: 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.profile-wizard {
+  max-width: 400px;
+  margin: 2em auto;
+  padding: 1em;
+  background: var(--secondary-color);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  margin-bottom: 1.5em;
+}
+.progress {
+  width: 0;
+  height: 100%;
+  background: var(--primary-color);
+  transition: width var(--transition);
+}
+
+.step h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.step input,
+.step select {
+  width: 100%;
+  padding: 0.75em;
+  margin: 0.5em 0;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 1em;
+  font-family: inherit;
+  color: #333;
+  appearance: none;
+}
+
+.activity-options {
+  display: flex;
+  flex-direction: column;
+}
+.activity-btn {
+  padding: 0.75em;
+  margin: 0.25em 0;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius);
+  background: var(--secondary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+.activity-btn.selected {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.current-targets div {
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+.nutrient-inputs {
+  margin: 1em 0;
+}
+.nutrient-inputs label {
+  display: block;
+  margin-bottom: 0.75em;
+}
+.nutrient-inputs input {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+.button-group button,
+#customizeTargets {
+  flex: 1;
+  padding: 0.75em;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+.button-group button:disabled,
+#submit-profile:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.button-group button:hover:not(:disabled),
+#customizeTargets:hover {
+  transform: translateY(-2px);
+}
+
+.avatar-upload {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#avatarPreview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#avatarPreview:hover {
+  transform: scale(1.05);
+  border-color: #4CAF50;
+}
+
+select:invalid {
+  color: #666666;
+}
